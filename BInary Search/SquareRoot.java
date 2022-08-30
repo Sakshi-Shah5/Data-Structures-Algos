@@ -4,6 +4,8 @@
 public class SquareRoot {
 	
 	static int squareRoot(int x) {
+		
+		//square root of x lies between 1 and x/2
 		int low = 1;
 		int high = x/2;
 		int ans=0;

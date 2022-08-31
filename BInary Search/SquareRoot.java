@@ -5,31 +5,36 @@ public class SquareRoot {
 	
 	static int squareRoot(int x) {
 		
+		//base case 
+      		 if(x == 1)
+          	  return 1;
+		
 		//square root of x lies between 1 and x/2
 		int low = 1;
 		int high = x/2;
-		int ans=0;
+		int square;
 		
 		while(low <= high) {
 			int mid = low + (high-low)/2;
-			int square = mid * mid;
+			square = mid * mid;
 			if(square > x) {
 				high = mid-1;
 			}
 			else if(square < x) {
-				ans = mid;
 				low = mid+1;
 			}
-			else {
+			else {    
+//if square == x and as square is mid*mid, 
+				//therefore mid will be the sq.root of x
 				return mid;
 			}
 		}
-		return ans;
+		return high; //if not a perfect square
 		
 	}
 	
 	public static void main(String[] args) {
-		int x = 120;
+		int x = 8;
 		System.out.print(squareRoot(x));
 	}
 

@@ -1,8 +1,12 @@
-package leetcode_problems;
+//leetcode 206
 
 public class ReverseLL {
 	
 	public static ListNode reverse(ListNode head) {
+		
+		if(head == null){
+         	   return head;
+       		 }
 		
 		ListNode current = head;
 		ListNode previous= null;

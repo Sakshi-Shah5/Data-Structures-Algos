@@ -1,4 +1,4 @@
-
+//leet 876
 public class MiddleElement {
 	 public static ListNode middleNode(ListNode head) {
 	        if(head == null){
